@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
+    <script>
+          $(document).ready(function(){
+            var user,pass;
+            $("#submit").click(function(){
+              $.post("/check",function(data){
+                if(data === 'yes') {
+                    document.getElementById("text").innerHTML="button clicked"
+                  }
+              });
+            });
+          });
+    </script>
+</head>
+<body>
+    <h1>Hello World !</h1>
+    <p id="text"></p>
+    <input id="submit" type="button" value="Check" />
+</body>
+</html>
