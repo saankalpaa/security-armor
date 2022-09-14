@@ -20,7 +20,7 @@ router.get("/test", (req, res) => {
 });
 
 router.post("/check", (req, res) => {
-  res.send("yes you did it!");
+  res.send("yes");
 });
 
 app.listen(3000, () => {
