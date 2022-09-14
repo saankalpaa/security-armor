@@ -7,16 +7,20 @@ app.use("/", router);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.get("/test", (req, res) => {
-  res.send("Hello test!");
+app.get("/", (req, res) => {
+  res.send("Hello World!");
 });
 
-router.get("/", (req, res) => {
+app.get("/check", (req, res) => {
+  res.send("Hello check");
+});
+
+router.get("/test", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
 router.post("/check", (req, res) => {
-  res.end("yes");
+  res.send("yes you did it!");
 });
 
 app.listen(3000, () => {
